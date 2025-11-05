@@ -1,0 +1,50 @@
+//1
+function compareNumbers(a: number, b: number): number {
+  if (a < b) return -1;
+  if (a > b) return 1;
+  return 0;
+}
+
+console.log(compareNumbers(5, 10)); // -1
+console.log(compareNumbers(10, 5)); // 1
+console.log(compareNumbers(3, 3));  // 0
+
+
+//2
+function factorial(n: number): number {
+  if (n <= 1) return 1;
+  return n * factorial(n - 1);
+}
+
+console.log(factorial(5)); // 120
+
+
+//3
+
+
+function toSeconds(hours: number = 0, minutes: number = 0, seconds: number = 0): number {
+  return hours * 3600 + minutes * 60 + seconds;
+}
+
+console.log(toSeconds(1, 30, 20)); // 5420
+console.log(toSeconds(0, 20));     // 1200
+
+
+//4
+
+
+
+function formatTime(totalSeconds: number): string {
+  const hours = Math.floor(totalSeconds / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = totalSeconds % 60;
+
+  const h = hours.toString().padStart(2, "0");
+  const m = minutes.toString().padStart(2, "0");
+  const s = seconds.toString().padStart(2, "0");
+
+  return `${h}:${m}:${s}`;
+}
+
+console.log(formatTime(5420)); // "01:30:20"
+console.log(formatTime(65));   // "00:01:05"
