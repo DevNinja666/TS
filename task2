@@ -1,0 +1,50 @@
+//1
+let age: number = Number(prompt("Enter your age:"));
+
+if (age >= 0 && age < 12) {
+    alert("Child");
+} else if (age >= 12 && age < 18) {
+    alert("Teenager");
+} else if (age >= 18 && age < 60) {
+    alert("Adult");
+} else if (age >= 60) {
+    alert("Pensioner");
+} else {
+    alert("Incorrect age");
+}
+
+
+//2
+let num: number = Number(prompt("Enter a number 0-9:"));
+let symbol: string;
+
+switch (num) {
+    case 1: symbol = "!"; break;
+    case 2: symbol = "@"; break;
+    case 3: symbol = "#"; break;
+    case 4: symbol = "$"; break;
+    case 5: symbol = "%"; break;
+    case 6: symbol = "^"; break;
+    case 7: symbol = "&"; break;
+    case 8: symbol = "*"; break;
+    case 9: symbol = "("; break;
+    case 0: symbol = ")"; break;
+    default: symbol = "Invalid number";
+}
+
+alert(symbol);
+
+
+//3
+
+let year: number = Number(prompt("Enter year:"));
+
+let isLeap: boolean =
+    (year % 400 === 0) ||
+    (year % 4 === 0 && year % 100 !== 0);
+
+if (isLeap) {
+    alert("Leap year");
+} else {
+    alert("Not leap year");
+}
