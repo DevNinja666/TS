@@ -1,0 +1,28 @@
+//1
+let flashGb: number = Number(prompt("Enter flash drive size in GB:"));
+let flashMb: number = flashGb * 1024;
+let fileSize: number = 820;
+
+let count: number = Math.floor(flashMb / fileSize);
+
+alert("You can fit " + count + " files of 820MB.");
+
+
+//2
+
+let num: number = Number(prompt("Enter a three-digit number:"));
+
+let a: number = Math.floor(num / 100);
+let b: number = Math.floor((num % 100) / 10);
+let c: number = num % 10;
+
+let reversed: number = c * 100 + b * 10 + a;
+
+alert("Reversed number: " + reversed);
+
+
+//3
+let x: number = Number(prompt("Enter an integer:"));
+
+(x % 2 === 0) && alert("Even");
+(x % 2 !== 0) && alert("Odd");
