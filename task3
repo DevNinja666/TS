@@ -1,0 +1,61 @@
+//1
+
+let positive = 0;
+let negative = 0;
+let zeros = 0;
+let even = 0;
+let odd = 0;
+
+for (let i = 1; i <= 10; i++) {
+  const num = Number(prompt(`Введите число #${i}:`));
+
+  if (num > 0) positive++;
+  else if (num < 0) negative++;
+  else zeros++;
+
+  if (num % 2 === 0) even++;
+  else odd++;
+}
+
+console.log(`Положительные: ${positive}`);
+console.log(`Отрицательные: ${negative}`);
+console.log(`Нули: ${zeros}`);
+console.log(`Четные: ${even}`);
+console.log(`Нечетные: ${odd}`);
+
+
+//2
+
+
+let again = "да";
+
+while (again.toLowerCase() === "да") {
+  const a = Number(prompt("Введите первое число:"));
+  const b = Number(prompt("Введите второе число:"));
+  const sign = prompt("Введите знак (+, -, *, /):");
+
+  let result: number | string;
+
+  switch (sign) {
+    case "+":
+      result = a + b;
+      break;
+    case "-":
+      result = a - b;
+      break;
+    case "*":
+      result = a * b;
+      break;
+    case "/":
+      result = b !== 0 ? a / b : "Ошибка: деление на ноль!";
+      break;
+    default:
+      result = "Неверный знак!";
+  }
+
+  console.log(`Результат: ${result}`);
+  again = prompt("Хотите решить еще один пример? (да/нет)") || "нет";
+}
+
+console.log("Калькулятор завершён.");
+
