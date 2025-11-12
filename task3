@@ -1,0 +1,18 @@
+const link = document.getElementById('myLink') as HTMLAnchorElement;
+const tooltip = document.getElementById('tooltip') as HTMLDivElement;
+
+link.addEventListener('mouseenter', (e: MouseEvent) => {
+  tooltip.innerText = link.href;      
+  tooltip.style.display = 'block';
+  tooltip.style.left = e.pageX + 10 + 'px';
+  tooltip.style.top = e.pageY + 10 + 'px';
+});
+
+link.addEventListener('mousemove', (e: MouseEvent) => {
+  tooltip.style.left = e.pageX + 10 + 'px';
+  tooltip.style.top = e.pageY + 10 + 'px';
+});
+
+link.addEventListener('mouseleave', () => {
+  tooltip.style.display = 'none';
+});
