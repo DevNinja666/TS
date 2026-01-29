@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Animated Slider TS</title>
+<style>
+* { box-sizing: border-box; margin:0; padding:0; font-family:Arial,sans-serif;}
+body { background:#111; color:#fff; display:flex; justify-content:center; align-items:center; height:100vh;}
+.slider { position:relative; width:700px; max-width:95%; overflow:hidden; border-radius:12px; background:#000;}
+.slides { display:flex; transition: transform 0.6s ease;}
+.slide { min-width:100%;}
+.slide img { width:100%; display:block;}
+.controls { display:flex; justify-content:space-between; padding:10px;}
+.controls button { background:#222; color:#fff; border:none; padding:8px 12px; cursor:pointer; border-radius:6px;}
+.controls button:hover { background:#444;}
+.indicators { display:flex; justify-content:center; gap:8px; padding:10px;}
+.indicator { width:12px; height:12px; background:#555; border-radius:50%; cursor:pointer;}
+.indicator.active { background:#fff;}
+.fullscreen { width:100vw; height:100vh; border-radius:0;}
+</style>
+</head>
+<body>
+
+<div class="slider" id="slider">
+    <div class="slides" id="slides">
+        <div class="slide"><img src="https://picsum.photos/id/1011/900/500"></div>
+        <div class="slide"><img src="https://picsum.photos/id/1015/900/500"></div>
+        <div class="slide"><img src="https://picsum.photos/id/1025/900/500"></div>
+        <div class="slide"><img src="https://picsum.photos/id/1035/900/500"></div>
+    </div>
+
+    <div class="controls">
+        <button id="firstBtn">First</button>
+        <button id="prevBtn">Prev</button>
+        <button id="autoBtn">Auto</button>
+        <button id="nextBtn">Next</button>
+        <button id="lastBtn">Last</button>
+        <button id="fsBtn">Toggle fullscreen</button>
+    </div>
+
+    <div class="indicators" id="indicators"></div>
+</div>
+
+<script src="slider.js" type="module"></script>
+</body>
+</html>
