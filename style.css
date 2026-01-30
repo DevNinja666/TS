@@ -1,0 +1,50 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  padding: 20px;
+}
+
+.form {
+  max-width: 450px;
+  margin: 0 auto 25px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+input, button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.palette {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.color-card {
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.preview {
+  height: 80px;
+}
+
+.info {
+  padding: 10px;
+  font-size: 14px;
+}
+
+.type {
+  font-size: 12px;
+  color: #777;
+}
+
+.error {
+  color: red;
+  text-align: center;
+}
